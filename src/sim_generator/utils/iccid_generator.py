@@ -3,7 +3,7 @@ import secrets
 
 def generate_iccid():
     mii = "89"
-    iin = "40102"
+    iin = "37202"
     body = ''.join(str(secrets.randbelow(10)) for _ in range(12))
     partial = mii + iin + body
 
