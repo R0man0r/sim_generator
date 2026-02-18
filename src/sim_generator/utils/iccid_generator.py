@@ -3,8 +3,9 @@ import secrets
 
 def generate_iccid():
     mii = "89"
-    body = ''.join(str(secrets.randbelow(10)) for _ in range(17))
-    partial = mii + body
+    iin = "40102"
+    body = ''.join(str(secrets.randbelow(10)) for _ in range(12))
+    partial = mii + iin + body
 
     check_digit = luhn_checksum(partial)
 
@@ -16,10 +17,13 @@ def luhn_checksum(digits: str) -> int:
 
     for i, d in enumerate(reverse_digits):
         n = int(d)
-        if i % 2 == 0:
+
+        if i % 2 == 1:
             n *= 2
             if n > 9:
                 n -= 9
+
         total += n
 
     return (10 - (total % 10)) % 10
+

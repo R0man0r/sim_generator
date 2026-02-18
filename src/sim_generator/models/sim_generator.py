@@ -1,6 +1,6 @@
 import secrets
-from models.sim_object import SimObject
-from utils.iccid_generator import generate_iccid
+from sim_generator.models.sim_object import SimObject
+from sim_generator.utils.iccid_generator import generate_iccid
 
 class SimGenerator:
 

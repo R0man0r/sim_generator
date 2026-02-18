@@ -1,7 +1,7 @@
 import csv
 import os
 from pathlib import Path
-from models.sim_object import SimObject
+from sim_generator.models.sim_object import SimObject
 
 DB_FILE = Path("src/sim_generator/db/user_db.csv")
 
