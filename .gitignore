@@ -1,0 +1,10 @@
+.venv
+**/__pycache__/
+src/sim_generator/models/__pycache__
+src/sim_generator/utils/__pycache__
+src/sim_generator.egg-info
+
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
